@@ -890,7 +890,7 @@
 
 #if HAS_PRINT_PROGRESS
   //#define PRINT_PROGRESS_SHOW_DECIMALS // Show progress with decimal digits (Graphical LCD only)
-  //#define SHOW_REMAINING_TIME          // Display estimated time to completion (Graphical LCD only)
+  #define SHOW_REMAINING_TIME          // Display estimated time to completion (Graphical LCD only)
 #endif
 
 #if HAS_CHARACTER_LCD && HAS_PRINT_PROGRESS
