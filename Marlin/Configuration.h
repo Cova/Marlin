@@ -725,19 +725,27 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4[, E5]]]]]
  */
+<<<<<<< HEAD
 #define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 800, 415 }
+=======
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 420 }
+>>>>>>> Updated configuration
 
 /**
  * Default Max Feed Rate (mm/s)
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4[, E5]]]]]
  */
+<<<<<<< HEAD
 #define DEFAULT_MAX_FEEDRATE          { 250, 250, 25, 25 }
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
   #define MAX_FEEDRATE_EDIT_VALUES    { 600, 600, 10, 50 } // ...or, set your own edit limits
 #endif
+=======
+#define DEFAULT_MAX_FEEDRATE          { 300, 300, 20, 25 }
+>>>>>>> Updated configuration
 
 /**
  * Default Max Acceleration (change/s) change = mm/s
@@ -1059,8 +1067,13 @@
 // @section machine
 
 // The size of the print bed
+<<<<<<< HEAD
 #define X_BED_SIZE 292
 #define Y_BED_SIZE 290
+=======
+#define X_BED_SIZE 294
+#define Y_BED_SIZE 286
+>>>>>>> Updated configuration
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
@@ -1684,7 +1697,7 @@
 //
 //  Set this option if CLOCKWISE causes values to DECREASE
 //
-#define REVERSE_ENCODER_DIRECTION
+//#define REVERSE_ENCODER_DIRECTION
 
 //
 // This option reverses the encoder direction for navigating LCD menus.
