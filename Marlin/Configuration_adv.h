@@ -517,7 +517,7 @@
 #define X_HOME_BUMP_MM 5
 #define Y_HOME_BUMP_MM 5
 #define Z_HOME_BUMP_MM 2
-#define HOMING_BUMP_DIVISOR { 4, 4, 8 }  // Re-Bump Speed Divisor (Divides the Homing Feedrate)
+#define HOMING_BUMP_DIVISOR { 8, 8, 16 }  // Re-Bump Speed Divisor (Divides the Homing Feedrate)
 #define QUICK_HOME                     // If homing includes X and Y, do a diagonal move initially
 //#define HOMING_BACKOFF_MM { 2, 2, 2 }  // (mm) Move away from the endstops after homing
 
@@ -601,8 +601,8 @@
 #define Z_STEPPER_AUTO_ALIGN
 #if ENABLED(Z_STEPPER_AUTO_ALIGN)
   // Define probe X and Y positions for Z1, Z2 [, Z3]
-  #define Z_STEPPER_ALIGN_X { 10, 290 }
-  #define Z_STEPPER_ALIGN_Y { 130, 130 }
+  #define Z_STEPPER_ALIGN_X { 33, 270 }
+  #define Z_STEPPER_ALIGN_Y { 152, 152 }
   // Set number of iterations to align
   #define Z_STEPPER_ALIGN_ITERATIONS 2
   // Enable to restore leveling setup after operation
@@ -1644,8 +1644,8 @@
   #define INTERPOLATE       true  // Interpolate X/Y/Z_MICROSTEPS to 256
 
   #if AXIS_IS_TMC(X)
-    #define X_CURRENT     800  // (mA) RMS current. Multiply by 1.414 for peak current.
-    #define X_MICROSTEPS   16  // 0..256
+    #define X_CURRENT     850  // (mA) RMS current. Multiply by 1.414 for peak current.
+    #define X_MICROSTEPS   32  // 0..256
     #define X_RSENSE     0.11
   #endif
 
@@ -1656,8 +1656,8 @@
   #endif
 
   #if AXIS_IS_TMC(Y)
-    #define Y_CURRENT     800
-    #define Y_MICROSTEPS   16
+    #define Y_CURRENT     850
+    #define Y_MICROSTEPS   32
     #define Y_RSENSE     0.11
   #endif
 
@@ -1668,14 +1668,14 @@
   #endif
 
   #if AXIS_IS_TMC(Z)
-    #define Z_CURRENT     800
-    #define Z_MICROSTEPS   16
+    #define Z_CURRENT     850
+    #define Z_MICROSTEPS   32
     #define Z_RSENSE     0.11
   #endif
 
   #if AXIS_IS_TMC(Z2)
-    #define Z2_CURRENT    800
-    #define Z2_MICROSTEPS  16
+    #define Z2_CURRENT    850
+    #define Z2_MICROSTEPS  32
     #define Z2_RSENSE    0.11
   #endif
 
@@ -1686,7 +1686,7 @@
   #endif
 
   #if AXIS_IS_TMC(E0)
-    #define E0_CURRENT    800
+    #define E0_CURRENT    600
     #define E0_MICROSTEPS  16
     #define E0_RSENSE    0.11
   #endif

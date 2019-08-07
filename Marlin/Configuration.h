@@ -717,7 +717,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4[, E5]]]]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 420 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 800, 420 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -906,15 +906,15 @@
  *     O-- FRONT --+
  *   (0,0)
  */
-#define X_PROBE_OFFSET_FROM_EXTRUDER 10  // X offset: -left  +right  [of the nozzle]
-#define Y_PROBE_OFFSET_FROM_EXTRUDER 10  // Y offset: -front +behind [the nozzle]
-#define Z_PROBE_OFFSET_FROM_EXTRUDER 0   // Z offset: -below +above  [the nozzle]
+#define X_PROBE_OFFSET_FROM_EXTRUDER 29  // X offset: -left  +right  [of the nozzle]
+#define Y_PROBE_OFFSET_FROM_EXTRUDER 7  // Y offset: -front +behind [the nozzle]
+#define Z_PROBE_OFFSET_FROM_EXTRUDER -2.1   // Z offset: -below +above  [the nozzle]
 
 // Certain types of probes need to stay away from edges
 #define MIN_PROBE_EDGE 10
 
 // X and Y axis travel speed (mm/m) between probes
-#define XY_PROBE_SPEED 8000
+#define XY_PROBE_SPEED 12000
 
 // Feedrate (mm/m) for the first approach when double-probing (MULTIPLE_PROBING == 2)
 #define Z_PROBE_SPEED_FAST HOMING_FEEDRATE_Z
@@ -1039,8 +1039,8 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 294
-#define Y_BED_SIZE 286
+#define X_BED_SIZE 292
+#define Y_BED_SIZE 290
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
@@ -1326,13 +1326,13 @@
 #if ENABLED(Z_SAFE_HOMING)
   //#define Z_SAFE_HOMING_X_POINT ((X_BED_SIZE) / 2)    // X point for Z homing when homing all axes (G28).
   //#define Z_SAFE_HOMING_Y_POINT ((Y_BED_SIZE) / 2)    // Y point for Z homing when homing all axes (G28).
-  #define Z_SAFE_HOMING_X_POINT (10)    // X point for Z homing when homing all axes (G28).
+  #define Z_SAFE_HOMING_X_POINT (35)    // X point for Z homing when homing all axes (G28).
   #define Z_SAFE_HOMING_Y_POINT (10)    // Y point for Z homing when homing all axes (G28).
 #endif
 
 // Homing speeds (mm/m)
-#define HOMING_FEEDRATE_XY (50*60)
-#define HOMING_FEEDRATE_Z  (4*60)
+#define HOMING_FEEDRATE_XY (120*60)
+#define HOMING_FEEDRATE_Z  (10*60)
 
 // Validate that endstops are triggered on homing moves
 #define VALIDATE_HOMING_ENDSTOPS
