@@ -519,11 +519,7 @@
 #define X_HOME_BUMP_MM 5
 #define Y_HOME_BUMP_MM 5
 #define Z_HOME_BUMP_MM 2
-<<<<<<< HEAD
 #define HOMING_BUMP_DIVISOR { 8, 8, 16 }  // Re-Bump Speed Divisor (Divides the Homing Feedrate)
-=======
-#define HOMING_BUMP_DIVISOR { 4, 4, 8 }  // Re-Bump Speed Divisor (Divides the Homing Feedrate)
->>>>>>> Updated configuration
 #define QUICK_HOME                     // If homing includes X and Y, do a diagonal move initially
 //#define HOMING_BACKOFF_MM { 2, 2, 2 }  // (mm) Move away from the endstops after homing
 
@@ -1786,11 +1782,11 @@
  */
 #if HAS_TRINAMIC
 
-  #define HOLD_MULTIPLIER    0.5  // Scales down the holding current from run current
-  #define INTERPOLATE       true  // Interpolate X/Y/Z_MICROSTEPS to 256
+  #define HOLD_MULTIPLIER   1  // Scales down the holding current from run current
+  #define INTERPOLATE    true  // Interpolate X/Y/Z_MICROSTEPS to 256
 
   #if AXIS_IS_TMC(X)
-    #define X_CURRENT     850  // (mA) RMS current. Multiply by 1.414 for peak current.
+    #define X_CURRENT    1000  // (mA) RMS current. Multiply by 1.414 for peak current.
     #define X_MICROSTEPS   32  // 0..256
     #define X_RSENSE     0.11
     #define X_CHAIN_POS    -1  // <=0 : Not chained. 1 : MCU MOSI connected. 2 : Next in chain, ...
@@ -1804,7 +1800,7 @@
   #endif
 
   #if AXIS_IS_TMC(Y)
-    #define Y_CURRENT     850
+    #define Y_CURRENT    1000
     #define Y_MICROSTEPS   32
     #define Y_RSENSE     0.11
     #define Y_CHAIN_POS    -1
@@ -1818,14 +1814,14 @@
   #endif
 
   #if AXIS_IS_TMC(Z)
-    #define Z_CURRENT     850
+    #define Z_CURRENT    1000
     #define Z_MICROSTEPS   32
     #define Z_RSENSE     0.11
     #define Z_CHAIN_POS    -1
   #endif
 
   #if AXIS_IS_TMC(Z2)
-    #define Z2_CURRENT    850
+    #define Z2_CURRENT   1000
     #define Z2_MICROSTEPS  32
     #define Z2_RSENSE    0.11
     #define Z2_CHAIN_POS   -1
@@ -1839,7 +1835,7 @@
   #endif
 
   #if AXIS_IS_TMC(E0)
-    #define E0_CURRENT    650
+    #define E0_CURRENT    850
     #define E0_MICROSTEPS  16
     #define E0_RSENSE    0.11
     #define E0_CHAIN_POS   -1
